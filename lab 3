@@ -7,3 +7,12 @@ print("Word\t\tStem")
 print("-----------------------")
 for word in tokens:
     print(word, "\t\t", stemmer.stem(word))
+
+output:-
+Word		Stem
+-----------------------
+The 		 the
+children 		 children
+are 		 are
+playing 		 play
+happily 		 happili
