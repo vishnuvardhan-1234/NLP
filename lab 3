@@ -1,0 +1,9 @@
+import nltk
+from nltk.stem import PorterStemmer
+sentence = "The children are playing happily"
+tokens = sentence.split()
+stemmer = PorterStemmer()
+print("Word\t\tStem")
+print("-----------------------")
+for word in tokens:
+    print(word, "\t\t", stemmer.stem(word))
