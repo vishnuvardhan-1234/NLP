@@ -8,3 +8,10 @@ def plural(noun):
 words = ["cat", "bus", "baby", "box", "boy"]
 for w in words:
     print(w, "->", plural(w))
+
+output:-
+cat -> cats
+bus -> buses
+baby -> babies
+box -> boxes
+boy -> boies
