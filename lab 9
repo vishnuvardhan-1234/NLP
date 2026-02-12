@@ -1,0 +1,23 @@
+import re
+def regex_pos_tagger(sentence):
+    words=sentence.split()
+    tagged=[]
+    for word in words:
+        if re.match(r'.*ing$',word):
+            tagged.append((word,'VBG'))   
+        elif re.match(r'.*ed$',word):
+            tagged.append((word,'VBD'))   
+        elif re.match(r'.*ly$',word):
+            tagged.append((word,'RB'))   
+        elif re.match(r'.*s$',word):
+            tagged.append((word,'NNS'))   
+        elif re.match(r'[A-Z].*',word):
+            tagged.append((word,'NNP'))   
+        else:
+            tagged.append((word,'NN'))    
+    return tagged
+sentence = "Vishnu is playing games happily"
+print(regex_pos_tagger(sentence))
+
+Output:-
+[('Vishnu', 'NNP'), ('is', 'NNS'), ('playing', 'VBG'), ('games', 'NNS'), ('happily', 'RB')]
