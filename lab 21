@@ -1,0 +1,19 @@
+import spacy
+nlp=spacy.load("en_core_web_sm")
+sentence="John bought a new car in Mumbai."
+doc=nlp(sentence)
+print("Noun Phrases and Meanings:")
+for chunk in doc.noun_chunks:
+    print("Noun Phrase:", chunk.text)
+    print("Root Word:", chunk.root.text)
+    print()
+
+Output:-
+Noun Phrase:John
+Root Word:John
+
+Noun Phrase:a new car
+Root Word:car
+
+Noun Phrase:Mumbai
+Root Word:Mumbai
