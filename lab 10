@@ -1,0 +1,14 @@
+def transformation_tagger(sentence):
+    words=sentence.split()
+    tagged=[(word,'NN') for word in words] 
+    for i in range(len(tagged)):
+        word,tag=tagged[i]
+        if word.endswith("ing"):
+            tagged[i]=(word,'VBG')
+    return tagged
+sentence="boys are playing cricket"
+print(transformation_tagger(sentence))
+
+
+Output:-
+[('boys','NN'),('are','NN'),('playing','VBG'),('cricket','NN')]
