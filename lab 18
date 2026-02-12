@@ -1,0 +1,16 @@
+import re
+def fopc_parser(expression):
+    pattern=r'([A-Z][a-zA-Z]*)\((.*?)\)'
+    match=re.match(pattern, expression)
+    if match:
+        predicate=match.group(1)
+        arguments=match.group(2).split(',')
+        print("Predicate:", predicate)
+        print("Arguments:", arguments)
+    else:
+        print("Invalid Expression")
+fopc_parser("Loves(John,Mary)")
+
+Output:-
+Predicate:Loves
+Arguments:['John', 'Mary']
