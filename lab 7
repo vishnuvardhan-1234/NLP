@@ -1,0 +1,14 @@
+import re
+pattern=r'^[A-Z].*\.$'
+sentences=["Hello world.","This is NLP.","hello world.","No period"]
+for s in sentences:
+    if re.match(pattern, s):
+        print(s,"-> Matched")
+    else:
+        print(s,"-> Not Matched")
+
+Output:-
+Hello world.-> Matched
+This is NLP.-> Matched
+hello world.-> Not Matched
+No period-> Not Matched
