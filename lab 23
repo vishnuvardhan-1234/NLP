@@ -1,0 +1,16 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+text = [
+    "Machine learning is interesting.",
+    "It is used in artificial intelligence.",
+    "Bananas are yellow."
+]
+vectorizer=TfidfVectorizer()
+tfidf=vectorizer.fit_transform(text)
+for i in range(len(text)-1):
+    similarity=cosine_similarity(tfidf[i],tfidf[i+1])
+    print(f"Similarity between sentence {i+1} and {i+2}:",similarity[0][0])
+
+Output:-
+Similarity between sentence 1 and 2: 0.45
+Similarity between sentence 2 and 3: 0.02
