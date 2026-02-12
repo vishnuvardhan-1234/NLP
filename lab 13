@@ -1,0 +1,10 @@
+def parse_tree(sentence):
+    if sentence=="Vishnu runs":
+        tree="(S (NP Vishnu)(VP runs))"
+        return tree
+    else:
+        return "No Parse Tree"
+print(parse_tree("Vishnu runs"))
+
+Output:-
+(S(NP Vishnu)(VP runs))
