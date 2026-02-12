@@ -1,0 +1,11 @@
+import re
+def reference_resolution(text):
+    sentences=text.split(".")
+    last_noun=None
+    for sentence in sentences:
+        words=sentence.split()
+        for i, word in enumerate(words):
+
+Output:-
+Resolved Sentence: John went to school
+Resolved Sentence: John met his friend
