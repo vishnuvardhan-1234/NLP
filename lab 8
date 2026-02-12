@@ -1,0 +1,14 @@
+import re
+pattern = r'^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$'
+dates = ["12/05/2024", "31/12/1999", "32/01/2023", "15/13/2022"]
+for date in dates:
+    if re.match(pattern,date):
+        print(date,"-> Valid Date")
+    else:
+        print(date,"-> Invalid Date")
+
+Output:-
+12/05/2024-> Valid Date
+31/12/1999-> Valid Date
+32/01/2023-> Invalid Date
+15/13/2022-> Invalid Date
