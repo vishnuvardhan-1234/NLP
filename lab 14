@@ -1,0 +1,14 @@
+def check_agreement(sentence):
+    words = sentence.split()
+    if words[0]=="He" and words[1] == "runs":
+        return "Agreement Correct"
+    elif words[0]=="They" and words[1] == "run":
+        return "Agreement Correct"
+    else:
+        return "Agreement Error"
+print(check_agreement("He runs"))
+print(check_agreement("They runs"))
+
+Output:-
+Agreement Correct
+Agreement Error
