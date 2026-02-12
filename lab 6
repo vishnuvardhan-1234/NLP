@@ -1,0 +1,15 @@
+import re
+pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+emails=["vishnu@gmail.com","user123@yahoo.in","wrong@email","abc@.com"]
+for email in emails:
+    if re.match(pattern, email):
+        print(email,"-> Valid Email")
+    else:
+        print(email,"-> Invalid Email")
+
+Output:-
+vishnu@gmail.com-> Valid Email
+user123@yahoo.in-> Valid Email
+wrong@email-> Invalid Email
+abc@.com-> Invalid Email
+
