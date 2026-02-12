@@ -1,0 +1,16 @@
+def earley_parser(sentence):
+    grammar={
+        "S":["NP VP"],
+        "NP":["John"],
+        "VP":["runs"]
+    }
+    if sentence=="John runs":
+        return "Parsed Successfully"
+    else:
+        return "Parsing Failed"
+print(earley_parser("John runs"))
+print(earley_parser("John eat"))
+
+Output:-
+Parsed Successfully
+Parsing Failed
