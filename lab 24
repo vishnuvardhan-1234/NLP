@@ -1,0 +1,23 @@
+def dialog_act(sentence):
+    if sentence.endswith("?"):
+        return "Question"
+    elif sentence.lower().startswith(("please", "do", "can you")):
+        return "Request"
+    elif sentence.endswith("!"):
+        return "Exclamation"
+    else:
+        return "Statement"
+dialog = [
+    "How are you?",
+    "Please open the door",
+    "I am fine.",
+    "Great!"
+]
+for d in dialog:
+    print(d, "->", dialog_act(d))
+
+Output:-
+How are you? -> Question
+Please open the door -> Request
+I am fine. -> Statement
+Great! -> Exclamation
