@@ -1,0 +1,12 @@
+def parse(sentence):
+    words=sentence.split()
+    if words==['John', 'runs']:
+        return "Sentence Accepted"
+    else:
+        return "Sentence Rejected"
+print(parse("John runs"))
+print(parse("John eat"))
+
+Output:-
+Sentence Accepted
+Sentence Rejected
