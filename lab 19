@@ -1,0 +1,11 @@
+from nltk.wsd import lesk
+from nltk.tokenize import word_tokenize
+sentence="He went to the bank to deposit money"
+word="bank"
+sense=lesk(word_tokenize(sentence), word)
+print("Sense:", sense)
+print("Definition:", sense.definition())
+
+Output:-
+Sense: Synset('bank.n.09')
+Definition: a financial institution that accepts deposits
